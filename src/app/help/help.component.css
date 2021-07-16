@@ -1,0 +1,26 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
+  }
+  
+  .heading {
+    font-family:cursive;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    width:fit-content;
+    align-self: flex-end;
+  }
+  
+  small{
+    color: red;
+    font-size:x-small;
+  }
+  

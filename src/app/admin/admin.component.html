@@ -1,0 +1,16 @@
+<div class="admin" >
+ 
+    <h4 style="background-color: deepskyblue;"> <b>ADMIN LOGIN</b></h4>
+     <form [formGroup]="adminLogin" (ngSubmit)="login()">
+    <mat-form-field  >
+      <mat-icon matPrefix>person </mat-icon>
+      <input type="text" matInput placeholder="Username" formControlName="username" required>
+     </mat-form-field><br/>
+    <mat-form-field >
+     <mat-icon matPrefix>password </mat-icon>
+     <input type="password" matInput placeholder="Password" formControlName="password" required>
+    </mat-form-field><br/>
+    <button mat-raised-button style="background-color: black;color: rgb(240, 255, 255);" [disabled]="!adminLogin.valid">Lets Login!</button>  
+     </form>
+  </div>
+  

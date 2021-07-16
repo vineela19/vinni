@@ -1,0 +1,45 @@
+<h1 class="heading"><u>Covid help Resources</u></h1>
+<div >
+    <form class="example-container" [formGroup]="resources" (ngSubmit)="save()">
+        <mat-form-field [floatLabel]="resources.value.floatLabel">
+            <mat-label>Full Name</mat-label>
+            <input matInput placeholder="Full Name" formControlName="name" required> 
+          </mat-form-field>
+          <mat-form-field [floatLabel]="resources.value.floatLabel">
+            <mat-label>Mobile Number</mat-label>
+            <input matInput placeholder="Mobile Number" formControlName="mobNum" required> 
+            </mat-form-field>
+            <small *ngIf="resources.controls.mobNum.errors && resources.controls.mobNum.touched">
+              <i>Invalid Mobile Number</i>
+            </small>
+    <mat-form-field [floatLabel]="resources.value.floatLabel">
+      <mat-select formControlName="medName" placeholder="Required resource" required>
+        <mat-option value="Paracetamol" >Paracetamol</mat-option>
+        <mat-option value="Ivermectin">Ivermectin</mat-option>
+        <mat-option value="B Complex with Zinc">B Complex with Zinc</mat-option>
+        <mat-option value="Vitamin C">Vitamin C</mat-option>
+        <mat-option value="Remdesivir">Remdesivir</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field [floatLabel]="resources.value.floatLabel">
+      <mat-label>Quantity</mat-label>
+      <input matInput placeholder="Quantity" formControlName="quantity" required> 
+    </mat-form-field>
+    <mat-form-field [floatLabel]="resources.value.floatLabel">
+      <mat-label>Referred By</mat-label>
+      <input matInput placeholder="Referred By" formControlName="docName" required>
+    </mat-form-field>
+    <div class="button">
+    <button  mat-raised-button color="primary" [disabled]="!resources.valid">Done</button>
+    </div>
+  </form>
+  </div>
+  <div  *ngIf="showMsg">
+    <p class="alert alert-success">
+      <strong>Resource request placed</strong>
+      </p>
+  </div>
+
+
+
+
